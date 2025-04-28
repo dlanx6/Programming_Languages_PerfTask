@@ -249,7 +249,6 @@ class Interpreter(NodeVisitor):
     
     
     def visit_UnaryOp(self, node):
-        node.op.type
         if node.op.type == PLUS:
             return +self.visit(node.expr)
         elif node.op.type == MINUS:
